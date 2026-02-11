@@ -24,7 +24,7 @@ export default defineConfig(() => ({
   // Configuration for building your library.
   // See: https://vite.dev/guide/build.html#library-mode
   build: {
-    outDir: '../dist/shared-models',
+    outDir: '../public/shared-models',
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {
