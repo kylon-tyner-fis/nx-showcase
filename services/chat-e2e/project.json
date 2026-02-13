@@ -8,7 +8,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{e2eProjectRoot}"],
       "options": {
-        "jestConfig": "api/chat-e2e/jest.config.cts",
+        "jestConfig": "services/chat-e2e/jest.config.cts",
         "passWithNoTests": true
       },
       "dependsOn": ["api:build", "api:serve"]
