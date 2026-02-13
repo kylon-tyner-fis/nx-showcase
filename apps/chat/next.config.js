@@ -3,13 +3,12 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const { composePlugins, withNx } = require('@nx/next');
 
-/**
- * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
- **/
 const apiBaseUrl =
   process.env.NEXT_PUBLIC_API_BASE_URL ||
   process.env.API_BASE_URL ||
-  'http://localhost:3001';
+  'http://localhost:300';
+
+console.log('Using API Server URL:', apiBaseUrl);
 
 const nextConfig = {
   // Use this to set Nx-specific options

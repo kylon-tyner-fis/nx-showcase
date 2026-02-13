@@ -14,5 +14,5 @@ export default {
     ],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/services/chat-e2e',
+  coverageDirectory: '../../coverage/api/chat-e2e',
 };
