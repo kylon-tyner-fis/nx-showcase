@@ -6,6 +6,11 @@ const { composePlugins, withNx } = require('@nx/next');
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
+const apiBaseUrl =
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  process.env.API_BASE_URL ||
+  'http://localhost:3001';
+
 const nextConfig = {
   // Use this to set Nx-specific options
   // See: https://nx.dev/recipes/next/next-config-setup
@@ -14,7 +19,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:3001/:path*', // Point to Fastify
+        destination: `${apiBaseUrl.replace(/\/$/, '')}/:path*`, // Point to Fastify
       },
     ];
   },
